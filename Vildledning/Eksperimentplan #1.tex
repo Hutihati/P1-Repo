@@ -1,0 +1,34 @@
+\documentclass[a4paper,11pt]{memoir}
+\usepackage{mathtools}
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+\usepackage{float}
+\begin{document}
+\chapter{Eksperimentplan 1}
+P1 - Gruppe C-16a - 07-Nov-16
+\newpage
+
+\section{Hvad vil vi opstille?}
+\begin{itemize}
+\item R-kreds
+\item CR-kreds
+\item LCR-kreds
+\end{itemize}
+Til alle opstillingerne vil der i starten benyttes et oscilloskop som kilde, sat til vekselspænding ved 5 V, 50Hz.
+
+De tre opsætninger benyttes som reference punkter til videre eksperimentring.  
+\section{R-kreds}
+Til at starte med vil vi opstille, det måske aller simpleste kredsløb, ved bare at sende en vekselspænding over en resistor og måle spændingsforskellen og strømmen over det.
+
+Herefter vha. $U=R\cdot I$ kan der så undersøges om den aflæste værdi af resistoren er den samme som den målte.
+\section{CR-kreds}
+Opstillingen her er ens med R-kredsen, uden ampere-meter, bare at der nu er sat en kapacitator på og volt-meteret er flyttet hen over kapacitatoren.
+
+Herefter ses der på om der er sket en ændring i spændingsforskellen over kapacitatoren, sammenlignet med den mængde spænding der er tilført systemet.
+\section{LCR-kreds}
+Dette er den vigtigste kreds der undersøges, da der nu er lavet et loop ved at sætte en spole i kredsløbet. Volt-meteret der benyttes her skulle gerne være et der kan tegne grafer, specifikt $(U,t)$.
+
+Kredsløbet er en forlængelse af de to andre. Volt-meteret er nu bare flyttet til hen over spolen, da dette er den komponent med størst relevans.
+
+Her undersøges der den spændingskurve tegnet over spolen. Denne kan herefter så sammenlignes med kurven i Plecs, hvis det er muligt at komme tæt på de virkelige værdier i programmet, så man får en nogenlunde præcis simulation.
+\end{document}
