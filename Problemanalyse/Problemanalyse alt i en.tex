@@ -1,9 +1,20 @@
 \input{preamble_ida16-Mads}
-
+\usepackage{graphicx}
 \begin{document}
 
 \chapter{Problemanalyse}
-\section{Fysiske love}
+\section{Historie??}
+H.C Ørsted var på ungdomsrejse i 1801, på denne rejse så H.C Ørsted nogle billeder, det var billeder, som tyskeren E.F.F. Chladni kunne fremkalde disse billeder var avancerede geometriske mønstre, som blev fremkaldt ved han strøg en violinbue med forskellige toner imod en glasplade med sand på. Men det der gjorder H.C ørsted oprindeligt interesseret, ved han fandt ud af, at han kunne gøre fint pulver elektrisk og derved skabe et mønster ved at stryge violinbuen imod pladen. Ud fra dette kunne H.C Ørsted se den sammenhængen der mellem den elektriske og mekaniske kraft. H.C Ørsted var inspireret af den tyske filosof Immanuel Kant igennem hele sit liv. Immanuel Kant havde opstillede sin egen teorier om naturen på trods han aldrig havde arbejdet med fysik. Immanuel Kants teori omkring naturen var, at der kun findes to naturkræfter hvilket vil mene, at elektricitet, magnetisme, varme og lys bare er de to kræfter, som er kombineret forskelligt. Magnetiske og elektriske kræft måtte have en sammenhæng, det var H.C Ørsted overbevist om, dette skyldtes Immanuel Kant teori. 
+
+Det var H.C Ørsted der i 1820 opdagede, at en magnetnål med kræfter bliver påvirket af elektrisk strøm, men hvis strømstyrken i ledningen blev øget viste det sig, at kraften der var på magnetnålen blev større. H.C Ørsted opdagede, som den første også, at magnetfeltet danner en lukket kreds. 
+
+Det næste skridt blev dog ikke taget af H.C Ørsted, men af Michael Faraday, Michael Faraday som var udlært bogbinder, men senere blev han assistent for en berømt kemiker nemlig Humphry Davy. Michael Faraday opdagede i 1831 princippet bag den elektriske tranformer og generator, men ikke mindst også elektromagnetisk induktion. Resten af årtiet arbejde Michael Faraday med, at udvikle sine teorier og ideer omkring elektricitet. 
+
+Nikola Tesla var en amerikansk opfinder med serbiske rødder, han lavede offentlige demonstrationer hvor han fremviste forsøg. Men Nikola Tesla fik aldrig rigtig den faglige anerkendelse, som han havde fortjent, men han befandt sig i skyggen Thomas Edison. Nikola Tesla var en af grundene til, at vekselstrøm vandt over jævnstrøm, dette gjorder blandt andet ved elmotoren, som bliver drevet på vekselstrøm. Hvis der bliver nævnt radiokredsløb, skal der tænkes på Nikola Tesla, da han var den første der udviklede de første, som var forstærkede. Opdagelsen omkring forstærkede radiokredsløb, som desuden er en forløber for det der bliver brugt meget i dag, der er tale om radio og tv. Nikola Tesla gjorder ikke kun forarbejdet for radio og tv, men han lavede også forarbejdet for smartphones og ikke mindst internettet, dette gjorder han ved, at lave eksperimenter, som indeholdt et trådløst elektronisk netværk.
+
+\newpage
+
+\section{Fysiske love??}
 Induktiv kopling:
 \begin{itemize}
 \item Elektriske felter
@@ -15,12 +26,12 @@ Induktiv kopling:
 Inden vi begynder at beregne den strøm, der bliver induseret mellem den trådløse oplader og det elektriske apparat, så skal vi have bedre kendskab til elektriske felter. Til dette skal vi se nærmere på Gauss's lov, der beskriver elektrisk flux gennem forholdet mellem det elektriske felt og det areal, det passerer ved en lukket overflade.
 
 Først kan vi definere formlen for flux, som angiver det elektriske felt ganget med arealet, det løber igennem: $\Phi = E \cdot A$. Da indfaldsvinklen for det elektriske felt også har betydning, så ser vi $\vec{E} \bullet \vec{A}$ i stedet for, hvilket også kan opskrives som $\Phi = E \cdot A \cdot cos(\theta)$. (Se figur X)
-%Figur af elektrisk felt vinkelret og vinklet på overflade
+Figur af elektrisk felt vinkelret og vinklet på overflade
 
 \begin{figure}[H]
 \centering
-%\includegraphics[scale=0.5]{vinkelflux}
-\caption{Figur X}
+\includegraphics[scale=0.5]{../Vildledning/Schematics/vinkelflux.jpg}
+\caption{Figur Vinkelflux}
 \end{figure}
 
 Gauss's lov angiver ikke kun den elektriske flux, men den kan benyttes til at beregne den flux, der forløber over et bestemt areal. Derved skal vi integrere i forhold til overfladen, samt at vektor A skal ganges med en faktor d, så vi får $\Phi = \int \vec{E} \bullet d \vec{A}$, som igen kan skrives som $\Phi = \int E \cdot dA \cdot cos(\theta)$. Herefter tager Gauss relation til det cirkulære felt omkring en positiv ladning. A bliver i denne sammenhæng formlen for en kugles overflade $4 \pi r^2$, mens integralet ophæves, da vi nu omtaler hele overfladen igen. Herfra får vi: $\Phi = E \cdot 4 \pi r^2$
@@ -67,7 +78,26 @@ Herefter kan vi kaste et blik på Maxwell's modificerede udgave af Ampère's lov
 
 Grunden til, at Maxwell udbygger Ampère's lov, er, at loven kun er gældende for, at en stabil strøm er med til at danne en magnetisk flux. For at skabe symmetri med Faraday, udformede Maxwell sin teori om, at elektrisk flux også er gældende for at danne magnetisk flux ved en ustabil strøm. Derved er udtrykket $\mu_0 \epsilon_0 \cdot \frac{d \Phi_E}{dt}$ tilføjet til det oprindelige udtryk.
 \newpage
+\section{Basis??}
+\subsection{Mikrobølger}
+En metode man kan bruge til at sende energi trådløst er ved hjælp af mikrobølger hvor man så omdanner den elektriske energi til mikrobølger og så sender dem var en PTU (Power Transmitter Unit) og til PRU (Power Receiver Unit). Hvor ved at man så omdanner mikrobølgerne tilbage til elektrisk strøm. Den typiske frekvens man bruger ligger mellem 300 MHZ og 300 GHZ. Mikrobølger har en fordel i form af at de kan sammen med at de sender energi, så kan de også bruges til at sende information, altså de kan bruges til kommunikation.  Det er ikke en mulighed som bliver brugt særlig ofte, da der kan ske mutationer hvis man er udsat for enten for hård stråling eller hvis man ofte bliver udsat for strålingen. Der er så stor fare at The Federal Communications Commission (FCC) har beslaglagt de stærke transmittere. Det er en af grundene til at man ikke bruger dem i bl.a. mobilopladere. FCC har lagt restriktioner på laderne til at må være på maks 4 W.
+\subsection{Elektromagnetisme}
+\subsection{Spoler}
+\subsection{Opbygning af kredsløb??}
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=1\textwidth]{../Vildledning/Schematics/Eks1_LCR.png}
+	\caption{LCR-Kredsløb}
+\end{figure}
+Hvor:
+\begin{table}[H]
+	\begin{tabular}{l|l}
+	$R$     & Resistans [\si \ohm] \\
+	$V_{ac}$ 	   &  Generator[\si Volt] \\
+	$A$ 	   & Ampere-meter [\si Ampere] \\
+	$V$			& Volt-meter [\si Volt]
+	\end{tabular}
+\end{table}
 
-\section{Opbygning af kredsløb}
-
+\subsection{Qi}
 \end{document}
