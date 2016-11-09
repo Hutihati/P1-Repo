@@ -202,3 +202,10 @@
 %%%% ORDDELING %%%%
 
 \hyphenation{In-te-res-se e-le-ment}
+
+%%%% MACRO %%%%
+
+\newenvironment{folderinput}[1]{%
+\let\finput\input
+\renewcommand{\input}[1]{\finput{#1/##1}}}%
+{\let\input\finput}
