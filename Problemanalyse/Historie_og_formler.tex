@@ -1,0 +1,76 @@
+\chapter{Historie}
+Trådløs energioverførsel har været et stort omdrejningspunkt for forskning de seneste år, og det bliver fortsat forbedret, men idéen om trådløs energioverførsel er på ingen måde ny. Tilbage i 1900-tallet begyndte fysikere at gøre sig tanke om og udvikle på teknologien på baggrund af andre større tænkere.
+
+Som baggrund for trådløs energioverførsel bragte fysikeren H. C. Ørsted idéen om, at elektricitet og magnetisme måtte have en sammenhæng. Ørsted begyndte at danne sin teori, da han observerede, hvordan elektrificerede sandkorn kunne fremkalde billeder. Derudover tog han baggrund i Immanuel Kants teorier om, at fænomener som magnetisme er betegnet som naturkræfter.
+
+H.C. Ørsted videreudviklede sine teorier gennem forsøg, hvilket førte til, at han i 1820 kunne bevise, at en magnetnål bliver påvirket af en elektrisk strøm. Hvis strømstyrken blev øget, blev kraften, der påvirkede magnetnålen, større. H. C. Ørsted beskrev også, hvordan magnetfelter danner en lukket kreds.
+
+En af de første der fokuserede på trådløs energioverførsel, og så det som en reel mulighed, var fysikeren Nikola Tesla. Han er en af fædrene til radiokredsløb, og han har gennem sin forskning skabt basis for radio, TV og internettet.
+
+Tesla blev ikke anerkendt af sine ligemænd, men han bragte sin videnskab til live gennem offentlige forsøg. Bl.a. beviste han, at han kunne få en tidlig udgave af fluoreserende pærer til at lyse uden tilslutning ved at transmitere elektricitet gennem luften.
+
+Nogle af de begreber, som Nikola Tesla byggede på var de opdagelser, som Michael Faraday gjorde sig. Faraday var en af efterfølgerne til H. C. Ørsted, og han uddybede begrebet om, at magnetisme og elektricitet havde en tæt sammenhæng. I år 1831 beskrev han princippet om elektromagnetisk induktion, hvor en elektrisk strøm kan blive skabt ud fra en skiftende magnetisk flux. Ud fra dette kunne han opstille det, som vi i dag kalder for Faraday's lov.
+
+Hvor Faraday opdagede, hvordan magnetisme kunne inducere elektricitet, så beskrev den franske fysiker og matematiker André-Marie Ampère, hvordan elektricitet kan skabe magnetiske felter. Ampère var (ligesom Faraday) inspireret af H. C. Ørsteds tanker og forsøg, hvilket lå til basis for hans egne forsøg og formuleringer. En meget essentiel observation han foretog sig var, hvordan en ledning, der førte en strøm, kunne frastødes eller tiltrækkes af en anden ledning, som også førte en strøm. Han indså at denne påvirkning, de to ledninger havde på hinanden, måtte skyldes magnetisme, hvilket han senere formulerede igennem sin lov: Ampère's lov.
+
+Faraday og Ampère beskriver begge en sammenhæng mellem elektricitet og magnetisme, hvilket vil blive uddybet i senere afsnit. Disse begreber er essentielle for at beskrive induktiv kobling, som ligger til grunde for trådløs energioverførsel gennem elektromagnetisme.
+
+\chapter{Fysiske love og formler}
+
+Induktiv kobling:
+
+For at få kendskab til, hvordan trådløs energioverførsel opstår, så skal beskrive, hvordan elektrisk flux opfører sig, hvilket bliver beskrevet gennem Gauss's lov. Derudover skal vi kaste et blik på, hvordan sammenhængen mellem magnetisme og elektricitet er beskrevet gennem Faraday's og Ampère's lov. Til slut ser vi på, hvordan der kan skabes symmetri mellem lovene gennem Maxwell's ligninger.
+
+Elektrisk flux:
+
+Elektrisk flux er beskrevet gennem Gauss's lov, som involverer de elektriske feltlinjer samt det areal, som feltlinjerne påvirker. Flux begrebet i sig selv er betegnet som det "flow" af en given substans (f.eks. vand, luft eller elektroner), der løber gennem et givent areal.
+
+Først kan vi definere formlen for flux, som angiver det elektriske felt ganget med arealet, det løber igennem: $\Phi = E * A$. Da indfaldsvinklen for det elektriske felt også har betydning, så ser vi $\vec{E} \bullet \vec{A}$ i stedet for, hvilket også kan opskrives som $\Phi = E * A * cos(\theta)$. (Se figur X)
+%Figur af elektrisk felt vinkelret og vinklet på overflade
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.5]{Vildledning/Schematics/Vinkelflux}
+\caption{Figur X}
+\end{figure}
+
+Gauss's lov angiver, hvordan man kan beregne den elektriske flux gennem et bestemt areal, som er givet ved vektoren A ganget med faktoren d, hvilket deler arealet op i brudstykker. Herefter tages integralet af formlen for flux, hvilket giver følgende udtryk: $\Phi = \int \vec{E} \bullet d \vec{A}$, som videre kan skrives som: $\Phi = \int E * dA * cos(\theta)$. Herefter tager Gauss relation til det cirkulære felt omkring en positiv ladning. A bliver i denne sammenhæng formlen for en kugles overflade $4 \pi r^2$, mens integralet ophæves, da vi nu omtaler hele overfladen igen. Herfra får vi: $\Phi = E * 4 \pi r^2$
+
+Det elektriske felt E er også angivet til at være $\frac{kq}{r^2}$. Ud fra dette får vi den elektriske flux til: $\Phi = \frac{kq}{r^2} * 4 \pi r^2 = 4 \pi k q$. k er derudover defineret som $\frac{1}{4 \pi \epsilon_0}$, hvilket vi kan indsætte i forrige formel, hvorved vi får: $\frac{4 \pi q}{4 \pi \epsilon_0} = \frac{q}{\epsilon_0}$.
+
+q angiver den omkransede ladning for en lukket overflade. Derved kan vi opskrive Gauss's lov til følgende:
+
+\centerline{$\oint \vec{E} \bullet d \vec{A} = \frac{q}{\epsilon_0}$}
+
+Elektromagnetisme:
+
+Ampère's lov:
+
+Ampère's lov beskriver relationen mellem magnetiske feltstyrker og størrelsen af en jævn strøm gennem en ledning givet over længden l. Ampère tager udgangspunkt i, at man befinder sig ved centrum af ledningens tværsnit følger magnetfeltet, som omkredser ledningen. Her er magnetfeltets styrke defineret ved vektoren $\vec{B}$, og et definerede linjestykke af magnetfeltets længde angives som $\vec{dl}$. For at beregne den jævne strøm gennem ledningen, skal vi tage integralet af de to vektorer prikket sammen. Herved beskrives Ampére's lov:
+
+\centerline{$\oint \vec{B} \bullet \vec{dl} = \mu_0 I$}
+
+Vektor $\vec{B}$ er angivet ved $\frac{\mu_0 I}{2 \pi r}$, da vi arbejder med et cirkelformet magnetfelt. Derudover er det lukkede integrale af $\vec{dl}$ den totale længde af cirkelperiferien angivet ved $2 \pi r$. Produktet mellem disse vil dermed blive $\mu_0 I$, som vi ser på højre side af Ampére's lov.
+
+Faraday's lov:
+
+Faraday's lov beskriver induktionen af elektricitet ved hjælp af magnetisme. Herved omhandler det den magnetiske flux i stedet for den elektriske flux, som benyttes ved Gauss's lov. Formlen for magnetisk flux er ens med formlen for den elektriske flux, dog hvor det elektriske felt er byttet ud med det magnetiske felt: $\Phi_B = \int \vec{B} \bullet \vec{dA}$
+
+En induseret strøm opstår ikke fra den magnetiske flux alene, men ved en ændring i den magnetiske flux. Dette betyde, at der bliver induseret spænding, hvis der sker en ændring af magnetfeltets styrke, den påvirkede overflades størrelse eller vinklen for, hvordan det magnetiske felt går gennem den pågældende overflade.
+
+Faraday benytter den magnetiske flux til at beskrive den inducerede spænding ved:
+
+\centerline{$\varepsilon = -1 * \frac{d \Phi_B}{dt}$}
+
+Ændringen af den magnetiske flux forekommer modsat af den inducerede spænding, så derfor ganges en faktor -1 på det differentierede udtryk af den magnetiske flux. Den magnetiske flux kan også beskrives som $\vec{B} \bullet \vec{A}$ eller $B * A * cos(\theta)$.
+
+Maxwell's ligninger:
+
+Ved trådløs opladning arbejder man med at omdanne elektrisk flux til magnetisk flux gennem spolen ved transmitteren, hvorefter den magnetiske flux igen skal omdannes til en elektrisk flux ved modtageren. For at beskrive hvordan elektriske felter omdannes til magnetisk flux, så skal vi se nærmere på Ampére's lov. Herefter kan overgangen fra magnetfelt til elektrisk flux beskrives gennem Faraday's lov. Til slut kan vi se på Maxwell's ligninger, som bygger videre på Ampère's og Faraday's love, hvorved vi kan skabe en sammenhæng.
+
+Maxwell indså, at der måtte foretages modifikationer for Ampére's lov, hvis der skulle kunne skabes symmetri med Faraday's lov. Ved Maxwell's ligninger er Faraday's lov opgivet som det lukkede linjeintegrale af det magnetiske felt, som er lig det negative differentiale af den magnetiske flux i forhold til tid: $\oint \vec{E} \bullet \vec{dl} = -1 * \frac{d \Phi_B}{dt}$.
+
+Herefter kan vi kaste et blik på Maxwell's modificerede udgave af Ampère's lov. Maxwell har her udbygget formlen, så der skabes en symmetri med Faraday's lov. Derved bliver Ampère's lov omskrevet til, at det lukkede linjeintegrale af det magnetiske felt er lig den elektriske spænding lagt sammen med differentialet af den elektriske flux i forhold til tiden, hvorpå der er ganget en faktor bestående af produktet mellem permeabilitetskonstanten og permittivitetskonstanten: $\oint \vec{B} \bullet \vec{dl} = \mu_0 * I + \mu_0 \epsilon_0 * \frac{d \Phi_E}{dt}$.
+
+Grunden til, at Maxwell udbygger Ampère's lov, er, at loven kun er gældende for, at en stabil strøm er med til at danne en magnetisk flux. For at skabe symmetri med Faraday, udformede Maxwell sin teori om, at elektrisk flux også er gældende for at danne magnetisk flux ved en skiftende strøm. Derved er udtrykket $\mu_0 \epsilon_0 * \frac{d \Phi_E}{dt}$ tilføjet til det oprindelige udtryk.
+
