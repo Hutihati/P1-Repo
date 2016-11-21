@@ -1,0 +1,260 @@
+Plecs {
+  Name          "Plecs2"
+  Version       "4.0"
+  CircuitModel  "ContStateSpace"
+  StartTime     "0.0"
+  StopTime      "1.0"
+  Solver        "radau"
+  MaxStep       "1e-3"
+  InitStep      "-1"
+  FixedStep     "1e-3"
+  Refine        "1"
+  ZCStepSize    "1e-9"
+  RelTol        "1e-3"
+  AbsTol        "-1"
+  TurnOnThreshold "0"
+  SyncFixedStepTasks "2"
+  UseSingleCommonBaseRate "2"
+  LossVariableLimitExceededMsg "3"
+  NegativeSwitchLossMsg "3"
+  DivisionByZeroMsg "3"
+  StiffnessDetectionMsg "2"
+  MaxConsecutiveZCs "1000"
+  AssertionAction "1"
+  InitializationCommands ""
+  InitialState  "1"
+  SystemState   ""
+  CodeGenParameterInlining "2"
+  CodeGenInliningExceptions "AAAACwAAAAAA"
+  CodeGenFloatingPointFormat "2"
+  CodeGenIntegerWordSize "32"
+  CodeGenAbsTimeUsageMsg "3"
+  CodeGenBaseName ""
+  CodeGenOutputDir ""
+  CodeGenExtraOpts ""
+  CodeGenTarget "Generic"
+  CodeGenTargetSettings ""
+  ExtendedMatrixPrecision "1"
+  MatrixSignificanceCheck "2"
+  ExternalModeSettings ""
+  Schematic {
+    Location      [699, 225; 1442, 629]
+    ZoomFactor    1
+    SliderPosition [0, 0]
+    ShowBrowser   off
+    BrowserWidth  100
+    Component {
+      Type          Scope
+      Name          "Scope"
+      Show          on
+      Position      [275, 25]
+      Direction     up
+      Flipped       off
+      Location      [1, 70; 1532, 843]
+      State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
+"G0AQQByAGUAYQAAAAAA/////wAAABoA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
+"///wAAAH4A////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAAB+AP///wAAAAMAAAd6AAAAgPw"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQBAAAAAAAAB3oAAABbAP///wAAB3oAAAMiAAAA"
+"BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
+"AAAAA=="
+      SavedViews    "AAAAAgAAAAA="
+      HeaderState   "AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAL2AIAAAAFAAAAC"
+"QAAAH0AAAAGAAAAfQAAAAcAAAB9AAAABAAAAH0AAAADAAAAfQAAB3oAAAALAQAAAQAAAAAAAAAAAA"
+"AAAH3/////AAAAgQAAAAAAAAALAAAAZAAAAAEAAAAAAAAAfQAAAAEAAAAAAAAAfQAAAAEAAAAAAAA"
+"AAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAfQAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAA"
+"AAAAfQAAAAEAAAAAAAAAAAAAAAEAAAAAAAAFIgAAAAEAAAAAAAAD6AA="
+      PlotPalettes  "AAAAAQAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+      Axes          "1"
+      TimeRange     "0.0"
+      ScrollingMode "1"
+      SingleTimeAxis "1"
+      Open          "0"
+      Ts            "-1"
+      SampleLimit   "0"
+      XAxisLabel    ""
+      Axis {
+        Name          ""
+        AutoScale     1
+        MinValue      0
+        MaxValue      1
+        Signals       {}
+        SignalTypes   [ ]
+        Untangle      0
+        KeepBaseline  off
+        BaselineValue 0
+      }
+      Fourier {
+        SingleXAxis   on
+        AxisLabel     "Frequency"
+        Scaling       0
+        PhaseDisplay  0
+        Axis {
+          Name          ""
+          AutoScale     1
+          MinValue      0
+          MaxValue      1
+          Signals       {}
+          Untangle      0
+          KeepBaseline  off
+          BaselineValue 0
+        }
+      }
+    }
+    Component {
+      Type          SignalMux
+      Name          "Mux"
+      Show          off
+      Position      [395, 90]
+      Direction     right
+      Flipped       off
+      Parameter {
+        Variable      "Width"
+        Value         "3"
+        Show          off
+      }
+    }
+    Component {
+      Type          ACVoltageSource
+      Name          "V_ac"
+      Show          on
+      Position      [35, 155]
+      Direction     down
+      Flipped       on
+      Parameter {
+        Variable      "V"
+        Value         "9.8"
+        Show          on
+      }
+      Parameter {
+        Variable      "w"
+        Value         "2*pi*3000"
+        Show          on
+      }
+      Parameter {
+        Variable      "phi"
+        Value         "0"
+        Show          off
+      }
+    }
+    Component {
+      Type          Voltmeter
+      Name          "Vm1"
+      Show          on
+      Position      [145, 50]
+      Direction     left
+      Flipped       off
+    }
+    Component {
+      Type          Ammeter
+      Name          "Am1"
+      Show          on
+      Position      [45, 50]
+      Direction     up
+      Flipped       off
+    }
+    Component {
+      Type          Resistor
+      Name          "R1"
+      Show          on
+      Position      [145, 110]
+      Direction     left
+      Flipped       off
+      Parameter {
+        Variable      "R"
+        Value         "500"
+        Show          on
+      }
+    }
+    Component {
+      Type          Inductor
+      Name          "L1"
+      Show          on
+      Position      [145, 205]
+      Direction     right
+      Flipped       off
+      Parameter {
+        Variable      "L"
+        Value         "0.07"
+        Show          on
+      }
+      Parameter {
+        Variable      "i_init"
+        Value         "0"
+        Show          off
+      }
+    }
+    Component {
+      Type          Capacitor
+      Name          "C1"
+      Show          on
+      Position      [255, 155]
+      Direction     down
+      Flipped       on
+      Parameter {
+        Variable      "C"
+        Value         "100e-9"
+        Show          on
+      }
+      Parameter {
+        Variable      "v_init"
+        Value         "0"
+        Show          off
+      }
+    }
+    Connection {
+      Type          Wire
+      SrcComponent  "V_ac"
+      SrcTerminal   2
+      Points        [35, 205]
+      DstComponent  "L1"
+      DstTerminal   2
+    }
+    Connection {
+      Type          Wire
+      SrcComponent  "L1"
+      SrcTerminal   1
+      Points        [255, 205]
+      DstComponent  "C1"
+      DstTerminal   2
+    }
+    Connection {
+      Type          Wire
+      SrcComponent  "C1"
+      SrcTerminal   1
+      Points        [255, 110; 200, 110]
+      Branch {
+        DstComponent  "R1"
+        DstTerminal   2
+      }
+      Branch {
+        Points        [200, 50]
+        DstComponent  "Vm1"
+        DstTerminal   2
+      }
+    }
+    Connection {
+      Type          Wire
+      SrcComponent  "R1"
+      SrcTerminal   1
+      Points        [85, 110]
+      Branch {
+        Points        [35, 110]
+        DstComponent  "V_ac"
+        DstTerminal   1
+      }
+      Branch {
+        Points        [85, 50]
+        DstComponent  "Vm1"
+        DstTerminal   1
+      }
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Vm1"
+      SrcTerminal   3
+      Points        [145, 25]
+      DstComponent  "Scope"
+      DstTerminal   1
+    }
+  }
+}
