@@ -1,9 +1,9 @@
 \input{Setup/preamble_ida16-Mads.tex}
 
-
+%% ^^Alt setup findes i preamble^^ %%
 
 \begin{document}
-
+\frontmatter %% romertegn som sidetal %%
 
 %% folderinput er så man frit kan flytte filerne ned til de relevante mapper %%
 
@@ -11,21 +11,23 @@
 \input{Forside}
 \input{Titelblad}
 
+%% Table of Contents %%
 \phantomsection													% Kunstigt afsnit, som hyperlinks kan 'holde fast i'
 \pdfbookmark[0]{Indholdsfortegnelse}{indhold}					% Tildeler en klikbar bookmark til den endelige PDF
-\tableofcontents*												% Indholdsfortegnelsen (kaldet ToC) 
+\tableofcontents*												% Indholdsfortegnelsen (kaldet ToC)
 
-\input{Indledning}
 	\end{folderinput}
 
-	\begin{folderinput}{Problemanalyse}
+\mainmatter %% Normale sidetal %%
+\input{Setup/Indledning} %% Står hernede da den rodede rundt i kapitlerne %%
 
+	\begin{folderinput}{Problemanalyse}
 \chapter{Problemanalyse}
 \input{Perspektivering}
 \input{historie_old}
 \input{fysik_old}
 \input{basis}
-\input{limits} %%QI er inkluderet her%%
+\input{limits} %% QI er inkluderet her %%
 \input{Problemformulering}
 
 	\end{folderinput}
@@ -34,9 +36,7 @@
 \input{Eksperimentplan_1}
 	\end{folderinput}
 
-Hello world!!!!!!!!!\cite{fysikbog}
-
-\bibliography{bib/bibfil}
+\bibliography{bib/bibfil} %% Litteraturlisten indsættes her %%
 
 %\input{Statusseminar/Fremad}
 \end{document}
