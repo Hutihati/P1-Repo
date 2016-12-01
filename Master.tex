@@ -10,6 +10,11 @@
 	\begin{folderinput}{Setup}
 \input{Forside}
 \input{Titelblad}
+
+\phantomsection													% Kunstigt afsnit, som hyperlinks kan 'holde fast i'
+\pdfbookmark[0]{Indholdsfortegnelse}{indhold}					% Tildeler en klikbar bookmark til den endelige PDF
+\tableofcontents*												% Indholdsfortegnelsen (kaldet ToC) 
+
 \input{Indledning}
 	\end{folderinput}
 
@@ -21,6 +26,7 @@
 \input{fysik_old}
 \input{basis}
 \input{limits} %%QI er inkluderet her%%
+\input{Problemformulering}
 
 	\end{folderinput}
 
