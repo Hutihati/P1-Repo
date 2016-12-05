@@ -21,17 +21,22 @@ Gauss's lov angiver, hvordan den elektriske flux gennem et bestemt areal kan ber
 
 Det elektriske felt $E$ er også angivet til at være $\frac{kq}{r^2}$. Derved bliver den elektriske flux: $\Phi = \frac{kq}{r^2} \cdot 4 \pi r^2 = 4 \pi k q$. $k$ er derudover defineret som $\frac{1}{4 \pi \epsilon_0}$, hvilket indsættes i formlen for elektrisk flux: $\frac{4 \pi q}{4 \pi \epsilon_0} = \frac{q}{\epsilon_0}$.
 
-$q$ angiver den omkransede ladning for en lukket overflade. Derved kan Gauss's lov skrives som:
+$q$ angiver den omkransede ladning for en lukket overflade. Derved kan Gauss's lov skrives som\cite[Kap. 21]{fysikbog}:
 
-\centerline{$\oint \vec{E} \cdot d \vec{A} = \frac{q}{\epsilon_0}$. \cite[Kap. 21]{fysikbog}}
+\begin{equation} \label{gauss}
+\centerline{$\oint \vec{E} \cdot d \vec{A} = \frac{q}{\epsilon_0}$} 
+\end{equation}
+
 
 Elektromagnetisme:
 
 Ampère's lov:
 
-Ampère's lov beskriver relationen mellem magnetiske feltstyrker og størrelsen af en jævn strøm, gennem en ledning givet over længden $l$. Ampère tager udgangspunkt i centrumet af ledningens tværsnit, som følger magnetfeltet, som omkredser ledningen. Her er magnetfeltets styrke defineret ved vektoren: $\vec{B}$, og et definerede linjestykke af magnetfeltets længde, angives som: $\vec{dl}$. For at beregne den jævne strøm gennem ledningen, skal der tages integralet af de to vektorer prikket sammen. Herved beskrives Ampére's lov:
+Ampère's lov beskriver relationen mellem magnetiske feltstyrker og størrelsen af en jævn strøm, gennem en ledning givet over længden $l$. Ampère tager udgangspunkt i centrumet af ledningens tværsnit, som følger magnetfeltet, som omkredser ledningen. Her er magnetfeltets styrke defineret ved vektoren: $\vec{B}$, og et definerede linjestykke af magnetfeltets længde, angives som: $\vec{dl}$. For at beregne den jævne strøm gennem ledningen, skal der tages integralet af de to vektorer prikket sammen. Herved beskrives Ampére's lov \cite{fysikbog}:
 
-\centerline{$\oint \vec{B} \cdot \vec{dl} = \mu_0 I$. \cite{fysikbog}}
+\begin{equation} \label{ampere}
+\centerline{$\oint \vec{B} \cdot \vec{dl} = \mu_0 I$}
+\end{equation}
 
 Vektor $\vec{B}$ er angivet ved $\frac{\mu_0 I}{2 \pi r}$, da magnetfeltet er cirkelformet. Derudover er det lukkede integral af $\vec{dl}$ den totale længde af cirkelperiferien angivet ved $2 \pi r$. Produktet mellem disse vil dermed blive $\mu_0 I$, som er angivet på højre side af Ampére's lov.
 
@@ -41,9 +46,11 @@ Faraday's lov beskriver induktionen af elektricitet, ved hjælp af magnetisme. H
 
 En induceret strøm opstår ikke fra den magnetiske flux alene, men ved en ændring i den magnetiske flux. Dette betyder, at der bliver induceret spænding, dvs. hvis der sker en ændring af magnetfeltets styrke, den påvirkede overflades størrelse eller vinklen for, hvordan det magnetiske felt går gennem den pågældende overflade.
 
-Faraday benytter den magnetiske flux til, at beskrive den inducerede spænding ved:
+Faraday benytter den magnetiske flux til, at beskrive den inducerede spænding ved \cite{fysikbog}:
 
-\centerline{$\varepsilon = -1 \cdot \frac{d \Phi_B}{dt}$. \cite{fysikbog}}
+\begin{equation} \label{faraday}
+\centerline{$\varepsilon = -1 \cdot \frac{d \Phi_B}{dt}$}
+\end{equation}
 
 Ændringen af den magnetiske flux forekommer modsat af den inducerede spænding, så derfor ganges en faktor $-1$ på det differentierede udtryk af den magnetiske flux. Den magnetiske flux kan også beskrives som: $\vec{B} \cdot \vec{A}$ eller $B \cdot A \cdot cos(\theta)$.
 
@@ -53,7 +60,11 @@ Trådløs opladning går ud på, at omdanne elektrisk flux til magnetisk flux ge
 
 Maxwell indså, at der måtte foretages modifikationer for Ampére's lov, hvis der skulle kunne skabes symmetri med Faraday's lov. Ved Maxwell's ligninger er Faraday's lov opgivet som, det lukkede linjeintegral af det magnetiske felt, som er lig det negative differentiale af den magnetiske flux i forhold til tid: $\oint \vec{E} \cdot \vec{dl} = -1 \cdot \frac{d \Phi_B}{dt}$.
 
-Herefter kan der tages et blik på Maxwell's modificerede udgave af Ampère's lov. Maxwell har her udbygget formlen, så der skabes en symmetri med Faraday's lov. Derved bliver Ampère's lov omskrevet til, at det lukkede linjeintegral af det magnetiske felt er lig den elektriske spænding, lagt sammen med differentialet af den elektriske flux i forhold til tiden, hvorpå der er ganget en faktor bestående af produktet mellem permeabilitetskonstanten og permittivitetskonstanten: $\oint \vec{B} \cdot \vec{dl} = \mu_0 \cdot I + \mu_0 \epsilon_0 \cdot \frac{d \Phi_E}{dt}$. \cite{fysikbog}
+Herefter kan der tages et blik på Maxwell's modificerede udgave af Ampère's lov. Maxwell har her udbygget formlen, så der skabes en symmetri med Faraday's lov. Derved bliver Ampère's lov omskrevet til, at det lukkede linjeintegral af det magnetiske felt er lig den elektriske spænding, lagt sammen med differentialet af den elektriske flux i forhold til tiden, hvorpå der er ganget en faktor bestående af produktet mellem permeabilitetskonstanten og permittivitetskonstanten \cite{fysikbog}: 
+
+\begin{equation} \label{maxwell}
+\centerline{$\oint \vec{B} \cdot \vec{dl} = \mu_0 \cdot I + \mu_0 \epsilon_0 \cdot \frac{d \Phi_E}{dt}$}
+\end{equation}
 
 Grunden til, at Maxwell udbygger Ampère's lov, er at loven kun er gældende for, at en stabil strøm er med til at danne en magnetisk flux. For at skabe symmetri med Faraday, udformede Maxwell sin teori om, at elektrisk flux også er gældende for at danne magnetisk flux ved en skiftende strøm. Derved er udtrykket $\mu_0 \epsilon_0 \cdot \frac{d \Phi_E}{dt}$ tilføjet til det oprindelige udtryk.
 
