@@ -1,6 +1,8 @@
 \input{Setup/preamble_ida16-Mads.tex}
 
 %% ^^Alt setup findes i preamble^^ %%
+\raggedbottom
+
 
 \begin{document}
 \frontmatter %% romertegn som sidetal %%
@@ -9,7 +11,9 @@
 
 	\begin{folderinput}{Setup}
 \input{Forside}
+\cleardoublepage
 \input{Titelblad}
+\cleardoublepage
 
 %% Table of Contents %%
 \phantomsection													% Kunstigt afsnit, som hyperlinks kan 'holde fast i'
@@ -32,6 +36,12 @@
 \input{Problemformulering}
 
 	\end{folderinput}
+	
+\begin{folderinput} {Teori}
+\chapter{Teori}
+\input{Reaktans_til_impedans}
+\input{Magnetfelter_og_renant_frekvens}
+\end{folderinput}
 
 	\begin{folderinput}{Beregninger}
 \input{Beregninger_draft1}
@@ -44,7 +54,12 @@
 	
 \bibliography{bib/bibfil} %% Litteraturlisten indsættes her %%
 
-\input{Setup/Bilag}
+
+\appendix
+\clearforchapter
+\phantomsection
+\pdfbookmark[0]{Appendiks}{appendiks}
+\include{Setup/Bilag}
 
 %\input{Statusseminar/Fremad}
 \end{document}
