@@ -1,0 +1,37 @@
+\section{Forsøg 2 - IKEA-oplader}
+
+I dette forsøg undersøges sammenhængen mellem afstanden af oplader: senderen og telefonen: modtageren med henblik på tabet af energi når der sker en trådløs opladning, og afstanden mellem sender og modtager vokser. Altså effektiviteten $\eta$ undersøges ved forskellige afstande mellem sender og modtager.
+
+\subsection{Forsøgsbeskrivelse}
+\subsubsection{Komponenter}
+
+\begin{table}[htbp] %% Komponenter tabel %%
+\centering
+\label{sender}
+\begin{tabular}{l|l|c|l}
+        & Powersupply                  & Oplader             & Cover               \\ \hline
+Model:  & KMW-190-330-GS               & MORIK, E1404        & VITAHULT, 22974     \\
+Input:  & 220-240V$\sim$50/60Hz, 0.18A & 19V$\sim$1.74A, 10W & 19V$\sim$1.74A, 10W \\
+Output: & 19V$\sim$1.74A, 10W          & 5W                  & 5V, 1A             
+\end{tabular}
+\caption{Alt er aflæst direkte fra komponenternes labels.}
+\end{table}
+
+Strømkilden er et standart ikke jordet, tobenet, europæisk væg stikkontakt, 230 volt.
+
+Som modtager er der benyttet en \textbf{Iphone 4S}, \textit{Model A1332 EMC 380B med FCC ID: BCG-E2380B, IC: 578C-E2380B.} 
+Denne enhed er udstyret med cover, model og egenskaber kan ses i tabel \ref{sender}.
+
+Ydermere er der benyttet papir til at lægge imellem mobilen med coveret og opladeren for at øge afstanden mellem dem, så det magnetiske felt forstyrres mindst muligt, og afstanden er holdt fast. 
+
+\textcolor{red}{Indsæt billede af opstilling her} 
+
+\subsubsection{Udførelse}
+
+Udførelsen af forsøget er meget simpel, og består af to dele der gentages tre gange. Første del er at bestemme hvor højt modtager telefonen skal være løftet fra opladeren. Altså længden L bestemmes i cm, hvor positiv retning er væk fra opladeren. Anden del er at aflæse telefonens batteriprocent hvert tiende minut. Dette gentages med tre forskellige værdier for L, altså tre forskellige afstande.
+
+Alle tre gange sikres der at koblingen ikke er ustabil. Hjælp til at opnå dette er en diode, i opladeren, der lyser konstant hvis koblingen er stabil. For at opnå denne stabile kobling placeres telefonen midt ovenpå opladeren, så spolerne i henholdsvis sender og modtager ligger direkte ovenpå hinanden.
+
+Første L værdi er valgt til 0 cm da dette teoretisk set burde være den optimale kobling mellem sender og modtager i et system designet til trådløs energioverførsel. 
+
+Rå, ikke redigeret, data kan ses i bilag
