@@ -1,0 +1,31 @@
+Ved induktiv kobling er det muligt at beregne den inducerede elektriske flux ved hjælp af den magnetiske flux. Ifølge Faraday's lov er den elektriske flux beskrevet som det negative differentiale af den magnetiske flux i forhold til tiden.
+
+Den benyttede induktor i forsøget er en cylinderformet spole. Det magnetiske felt for spolen er angivet som $\mu_o * n *I$, hvor n er antal vindinger for spolen, og I er strømstyrken. For at beregne den samlede magnetiske flux dannet i spolen, så skal arealet for den cylinderformede spoles tværsnit og længden for spolen ganges på. Tværsnitsarealet for spolen kan opskrives som $2 \pi r^2$, så den magnetiske flux kan beregnes ved $\Phi_B = \mu_o * n * I * 2 * \pi * r^2 * l$. Induktansen for spolen beregnes ved $\mu_o * n * 2 * \pi * r^2$, hvilket kun består af konstanter, så den magnetiske flux kan beskrives som $\Phi_B = L * I$.
+
+Den elektriske flux for spolen kan nu beskrives ved Faraday's lov:
+
+\begin{equation}
+\xi = - \frac{d\Phi_B}{dt}
+\end{equation}
+
+Herved kan udtrykket for den magnetiske flux indsættes, så den elektriske flux kan beregnes ved:
+
+\begin{equation}
+\xi = - L * \frac{dI}{dt}
+\end{equation}
+
+Faraday's lov beskrives her, hvordan størrelsen på den elektriske flux er afhængig af en varierende strømstyrke. Strømstyrken kan beskrives ved $I_o * sin(\omega * t + \varphi$, hvor $I_o$ er amplituden for sinusfunktionen, omega er $2 * \pi * f$ og $varphi$ angiver faseforskydelsen for funktionen.
+
+Ved forsøget med LCR-kredsløbet, hvor der foretages målinger over spolen, er det største udslag for spændingen ved $3 kHz$ med en spænding på $13,2 V$. Ved systemet er der indsat en modstand på $500 \Omega$, så amplituden kan beregnes ved $I_o = \frac{U}{R} = \frac{13,2 V}{500 \Omega} = 26,4 mA$. Strømstyrken kan herefter beskrives som en funktion af tiden ved:
+
+\begin{equation}
+I = 26,4 mA * sin(2 \pi * 3 kHz * t + \varphi)
+\end{equation}
+
+Faseforskydelsen $\varphi$ varierer mellem 0 og $\frac{\phi}{2}$. Hvis forskydelsen er 0, følger fungtionen for strømstyrken og spændingen hinanden. Hvis faseforskydelsen er på $\frac{\phi}{2}$, vil funktionen følge en cosinus i stedet.
+
+Herfra kan udtrykket for strømstyrken indsættes i formlen for den elektriske flux, som derved bliver:
+
+\begin{equation}
+\xi = - L * \frac{dI}{dt} = - 42,3 mH * 26,4 mA * cos(2 \phi * 3 kHz * t +\varphi) * 2 \phi * 3 kHz = cos(18,85 kHz * t + \varphi) * 21,05 H * A * Hz
+\end{equation}
