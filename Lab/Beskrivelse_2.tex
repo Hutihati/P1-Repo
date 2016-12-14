@@ -1,8 +1,8 @@
-\section{Forsøg 2 - IKEA-oplader}
+\section{Forsøg 2 - IKEA-oplader} \label{sec:forsg2}
 
 I dette forsøg undersøges sammenhængen mellem afstanden af oplader: senderen og telefonen: modtageren med henblik på tabet af energi når der sker en trådløs opladning, og afstanden mellem sender og modtager vokser. Altså effektiviteten $\eta$ undersøges ved forskellige afstande mellem sender og modtager.
 
-\subsection{Forsøgsbeskrivelse}
+\subsection{Forsøgsbeskrivelse} 
 \subsubsection{Komponenter}
 
 \begin{table}[htbp] %% Komponenter tabel %%
@@ -48,9 +48,13 @@ Alle tre gange sikres der at koblingen ikke er ustabil. Hjælp til at opnå dett
 
 Første L værdi er valgt til 0 cm da dette teoretisk set burde være den optimale kobling mellem sender og modtager i et system designet til trådløs energioverførsel. Det ses også i den første graf der hvor $L = 0$ at denne opnår den højeste ladningsprocent. Det skal dog noteres at spolerne i sender og modtager ikke lægger præcist direkte ovenpå hinanden da der er et lag plastik og et gummikryds imellem. Disse antages ikke at have nogen effekt på opladningen. Længden L starter fra den hvide plastikskive med gummikrydset på opladeren, altså direkte ovenpå. Den præcise afstand mellem plastic og spole i senderen er ukendt. Det samme gælder i coverets ydre plastiklag, hvor dennes tykkelse og afstand mellem den og modtager spolen også er ukendt.
 
-Tiden er målt hvert tiende minut (bilag \ref{bilag:forsg2}) og målt med en afvigelse på $\pm 10$ sekunder, hvilket burde være hurtigt nok til ikke at se en ændring i ladningsprocenten.
+Tiden er målt hvert tiende minut (bilag \ref{bilag:forsg2}) og målt med en afvigelse på $\pm 5$ sekunder, hvilket burde være hurtigt nok til ikke at se en ændring i ladningsprocenten.
+
+Til slut undersøges værdien af L hvor der ikke er muligt at danne en kobling, altså der hvor dioden stopper med at lyse og der ikke sker en opladning af batteriet.
 
 \subsubsection{Resultater}
+Det ses at op til omkring L = 1 cm, at det ikke er muligt at danne en forbindelse mellem opladeren og coveret med telefonen i.
+
 Rå, ikke redigeret, data kan ses i bilag \ref{bilag:forsg2}. Disse data er benyttet til at opstille de følgende tre diagrammer:
 
 \begin{figure}[H]
@@ -73,8 +77,6 @@ Rå, ikke redigeret, data kan ses i bilag \ref{bilag:forsg2}. Disse data er beny
 \caption{}
 \label{figure:graf3}
 \end{figure}
-
-\newpage
 
 I første forsøg hvor $L = 0$ ses det at opladning af batteriet nåede op på 82 procent ladning af maksimal ladning på batteriet (100 procent), indenfor den målte tidsperiode på 60 minutter. I de to næste forsøg ender opladningsprocenten efter 60 minutter på henholdsvis 81 procent og 57 procent ved $L = 0.25$ og $L = 0.5$ aflæst fra datasættet i bilag \ref{bilag:forsg2} og ses tydeligt på figur \ref{figure:graf1}, figur \ref{figure:graf2} og figur \ref{figure:graf3}.
 
@@ -117,39 +119,20 @@ I det første forsøg ender telefonen på 82 \% efter 60 minutter så:
 Nyttevirkningen (i \%) kan nu beregnes vha. $\Delta O_1$ og $\Delta O_{maks}$:  
 \begin{equation}
 \eta_1 = \frac{\Delta O_1}{\Delta O_{maks}} \cdot 100 = \frac{3,6 Wh}{5 Wh} \cdot 100 \approx 86 \%
-\end{equation}
-
-\textcolor{red}{Her skal der laves videre og overvejes}
-
-\begin{align*}
-& \Delta O_{1.2\%} = 77\%-15\% =  62\%  \\
-& \Delta O_{1.2} = 5,3 Wh \cdot 0,62 = 3,3 Wh
-\end{align*}
-Nyttevirkningen 2.2 beregnes:
-\begin{equation}
-\eta_{1.2} = \frac{\Delta O_{1.2}}{\Delta O_{maks}} \cdot 100 = \frac{3,3 Wh}{5 Wh} \cdot 100 = 66 \%
+\label{eq:nyt1}
 \end{equation}
 
 Dette gøres ved de to næste forsøg, stadig efter 60 minutters opladning.
 
 \textbf{2. kør:}
 \begin{align*}
-& \Delta O_{2\%} = 81\%-15\% =  66\%  \\
-& \Delta O_2 = 5,3 Wh \cdot 0,66 = 3,5 Wh
+& \Delta O_{2\%} = 71\%-15\% =  56\%  \\
+& \Delta O_2 = 5,3 Wh \cdot 0,56 = 3 Wh
 \end{align*}
 Nyttevirkningen beregnes:
 \begin{equation}
-\eta_2 = \frac{\Delta O_2}{\Delta O_{maks}} \cdot 100 = \frac{3,5 Wh}{5 Wh} \cdot 100 \approx 83 \%
-\end{equation}
-
-Her i kør to er der muligvis gået noget galt i målingen da på ændringen i mobilens procent ladning er meget stor fra det 50. minut til 60. så det ville måske være mere relevant at undersøge det kør to efter 50 minutter i stedet for 60.
-\begin{align*}
-& \Delta O_{2.2\%} = 72\%-15\% =  57\%  \\
-& \Delta O_{2.2} = 5,3 Wh \cdot 0,57 = 3 Wh
-\end{align*}
-Nyttevirkningen 2.2 beregnes:
-\begin{equation}
-\eta_{2.2} = \frac{\Delta O_{2.2}}{\Delta O_{maks}} \cdot 100 = \frac{3 Wh}{5 Wh} \cdot 100 = 60 \%
+\eta_2 = \frac{\Delta O_2}{\Delta O_{maks}} \cdot 100 = \frac{3 Wh}{5 Wh} \cdot 100 = 60 \%
+\label{eq:nyt2}
 \end{equation}
 
 \textbf{3. kør:}
@@ -160,6 +143,21 @@ Nyttevirkningen 2.2 beregnes:
 Nyttevirkningen beregnes:
 \begin{equation}
 \eta_3 = \frac{\Delta O_3}{\Delta O_{maks}} \cdot 100 = \frac{2,2 Wh}{5 Wh} \cdot 100 \approx 44 \%
+\label{eq:nyt3}
 \end{equation}
 
-\subsection{Konklusion}
+De tre værdier for $\eta$ stilles op i et $(L,\eta)$ koordinatsystem ser det således ud som i figur \ref{figure:graf4}
+
+\begin{figure}[H]
+\includegraphics[width=1\textwidth]{Setup/forsg2_graf4}
+\caption{}
+\label{figure:graf4}
+\end{figure}
+I samme omgang laves der en lineær regression men kun af de tre målte punkter. Det sidste punkt der er skæringen med x-aksen bestemmes ud fra regressionen:
+\begin{align*}
+& solve(y=-0.8422x+0.8393,x) \\
+& \Leftrightarrow x = 1,003964 \Leftrightarrow L \approx 1 cm
+\end{align*} 
+Dette er så den maksimale værdi for L, altså den maksimale afstand mellem opladerens overflade og telefonen med cover. Dette virker som en brugbar projektion da det er tæt på den maksimale L værdi som der blev målt til under forsøget, der var lige under 1 cm. Dette vil så sige at den bestemte lineære ligning til en vis grænse kan benyttes til at vise en sammenhæng mellem afstanden og nyttevirkningen, og i sidste ende hvor meget power man kan få ud af opladeren. I hvert fald for den givne IKEA oplader.
+
+Altså i de tre forsøg formåede den trådløse oplader fra IKEA at overføre 3,6 Wh, 3,0 Wh og 2,2 Wh som henholdsvis er en nyttevirkning på 86 \%, 60 \% og 44 \% for de tre 'kør'. Altå er det tydeligt at når afstanden L mellem sender og modtager vokser mindskes energioverførslen betydeligt.
