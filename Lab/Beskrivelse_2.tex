@@ -6,29 +6,31 @@ I dette forsøg undersøges sammenhængen mellem afstanden af oplader: senderen 
 \subsubsection{Komponenter}
 
 \begin{table}[htbp] %% Komponenter tabel %%
-\label{sender}
 \begin{tabular}{l|l|c|l}
-        & Powersupply                  & Oplader             & Cover               \\ \hline
+        & Strømforsyning               & Oplader             & Cover               \\ \hline
 Model:  & KMW-190-330-GS               & MORIK, E1404        & VITAHULT, 22974     \\
-Input:  & 220-240V$\sim$50/60Hz, 0.18A & 19V$\sim$1.74A, 10W & 19V$\sim$1.74A, 10W \\
+Input:  & 220-240V$\sim$50/60Hz, 0.18A & 19V$\sim$1.74A, 33W & 5 W       \\	
 Output: & 19V$\sim$1.74A, 10W          & 5W                  & 5V, 1A             
 \end{tabular}
-\caption{Alt er aflæst direkte fra komponenternes labels.}
+\caption{Alt er aflæst direkte fra komponenternes etiketter.}
+\label{table:sender}
 \end{table}
 
+%%%%%%%%%%%%%
+
 \begin{table}[htbp]
-\label{table:batteri}
 \begin{tabular}{l|lcl}
          & Iphone 4S &          &        \\ \hline
 Batteri: & Li-Po     & 1432 mAh & 5.3 Wh
 \end{tabular}
 \caption{Aflæst fra \cite{batteri}}
+\label{table:batteri}
 \end{table}
 
-Strømkilden er et standart ikke jordet, tobenet, europæisk væg stikkontakt, 230 volt.
+Strømkilden til strømforsyningen er et standart ikke jordet, tobenet, europæisk væg stikkontakt, 230 volt 50 Hz.
 
 Som modtager er der benyttet en \textbf{Iphone 4S}, \textit{Model A1431 \textcolor{red}{EMC 380B med FCC ID: BCG-E2380B, IC: 578C-E2380B.}} 
-Denne enhed er udstyret med cover, model og egenskaber kan ses i tabel \ref{sender}. Her er det dog vigtigt at notere sig at telefonen er brugt, og er en ældre model (købt november 2011). Altså er batteriet ikke i fabriksny tilstand. Det er usikkert om dette har haft en relevant effekt på det udførte forsøg. Da dette kan have en effekt på hvordan batteriet lader. I forsøget er der antaget at opladningen sker lineært, mere om dette i følgende sektioner.
+Denne enhed er udstyret med cover, model og egenskaber kan ses i tabel \ref{table:sender}. Her er det dog vigtigt at notere sig at telefonen er brugt, og er en ældre model (købt november 2011). Altså er batteriet ikke i fabriksny tilstand. Det er usikkert om dette har haft en relevant effekt på det udførte forsøg. Da dette kan have en effekt på hvordan batteriet lader. I forsøget er der antaget at opladningen sker lineært, mere om dette i følgende sektioner.
 
 Ydermere er der benyttet papir til at lægge imellem mobilen med coveret og opladeren for at øge afstanden mellem dem, så det magnetiske felt forstyrres mindst muligt, og afstanden er holdt fast. 
 
@@ -47,51 +49,111 @@ Tiden er målt hvert tiende minut (bilag \ref{bilag:forsg2}) og målt med en afv
 \subsubsection{Resultater}
 Rå, ikke redigeret, data kan ses i bilag \ref{bilag:forsg2}. Disse data er benyttet til at opstille de følgende tre diagrammer:
 
-%\begin{figure}[H] %% udkommenteret side om side grafer da de var for små
-%	\centering
-%	\begin{minipage}[b]{0.48\textwidth}
-%	\centering
-%	\includegraphics[width=1\textwidth]{Setup/forsg2_graf1} % Venstre billede
-%	\end{minipage}
-%	\hfill
-%	\begin{minipage}[b]{0.5\textwidth}
-%	\centering
-%	\includegraphics[width=1\textwidth]{Setup/forsg2_graf2} % Højre billede
-%	\end{minipage}
-%	\\ % Figurtekster og labels
-%	\begin{minipage}[t]{0.5\textwidth}
-%	\caption{} % Venstre figurtekst og label
-%	\label{figure:graf1}
-%	\end{minipage}
-%	\hfill
-%	\begin{minipage}[t]{0.48\textwidth}
-%	\caption{} % Højre figurtekst og label
-%	\label{figure:graf2}
-%	\end{minipage}
-%\end{figure}
-
 \begin{figure}[H]
 \centering
 \includegraphics[width=1\textwidth]{Setup/forsg2_graf1}
-\label{figure:graf1}
 \caption{}
+\label{figure:graf1}
 \end{figure}
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=1\textwidth]{Setup/forsg2_graf2}
-\label{figure:graf2}
 \caption{}
+\label{figure:graf2}
 \end{figure}
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=1\textwidth]{Setup/forsg2_graf3}
-\label{figure:graf3}
 \caption{}
+\label{figure:graf3}
 \end{figure}
 
 \newpage
 
-I første forsøg hvor $L = 0$ ses det at opladning af batteriet nåede op på 82 procent ladning af maksimal ladning på batteriet (100 procent), indenfor den målte tidsperiode på 60 minutter. I de to næste forsøg ender opladningsprocenten efter 60 minutter på henholdsvis 81 procent og 57 procent ved $L = 0.25$ og $L = 0.5$ aflæst fra figur \ref{figure:graf1} figur, \ref{figure:graf2} og figur \ref{figure:graf3}.
+I første forsøg hvor $L = 0$ ses det at opladning af batteriet nåede op på 82 procent ladning af maksimal ladning på batteriet (100 procent), indenfor den målte tidsperiode på 60 minutter. I de to næste forsøg ender opladningsprocenten efter 60 minutter på henholdsvis 81 procent og 57 procent ved $L = 0.25$ og $L = 0.5$ aflæst fra datasættet i bilag \ref{bilag:forsg2} og ses tydeligt på figur \ref{figure:graf1}, figur \ref{figure:graf2} og figur \ref{figure:graf3}.
 
+Der er lavet tre lineære regressioner per diagram, en af de tre førstedatapunkter en for de tre sidste og den over dem alle samlet. Her ses det at opladningen ikke sker helt lineært, altså at opladningen sker ved samme hastighed gennem hele forløbet. Ved sammenligning af hældningskoefficienten af de tre første punkter og tre sidste punkter ses det at opladningen er mere effektiv i starten af opladningen end den er til slut f.eks. i figur \ref{figure:graf1} hvor $0,012\, \frac{E_\%}{t} > 0,009\, \frac{E_\%}{t}$.
+
+Den ikke lineære opladning kan skyldes af et væld af ting, hvor det er antaget at det ikke er skyldt af den trådløse opladning, men snarere faktorer som: et ældre batteri, smartchargin teknologi\footnote{Det er ikke undersøgt om den målte telefon har disse teknologier eller hvordan de fungerer, på højere end basis niveau.} eller andet software der har en effekt på batteriet el. andet. 
+
+\subsection{Databehandling}
+I denne sektion undersøges det, ud fra det begrænsede datasæt, hvor stor effektivitet der mistes ved at forlænge afstanden mellem oplader og telefon med cover. Dette undersøges ved at beregne forskellige nyttevirkninger for den varierende værdi af L. 
+
+Det antages at når batteriets batteri procent kan aflæses til 100 \% på telefonens display at batteriet indeholder $O_{maks}=1432\, mAh \approx 5,3 Wh$. Dette benyttes så til at udregne nyttevirkningen $\eta$ med watt time værdier.
+
+Det aflæses i skemaet \ref{table:sender} at opladeren har en effekt på 5 W og coveret har en en effekt på $(5 V \cdot 1 A = 5 W)$. Hvis det antages at der bliver ladt op telefonens batteri med den fulde mulige effekt gennem hele forsøget (lineær opladning) kan der bestemmes hvilken procent batteriet skulle kunne aflæses til efter 60 minutter:
+
+\begin{equation}
+O_{maks60}= \frac{5 W\cdot 1h}{5,3Wh} \cdot 100 \approx 94 \%
+\label{eq:omaks}
+\end{equation}
+
+Dette er så den teoretiske maksimale opladningsprocent batteriet kan ende på. Denne viser også hvor meget der kan lades på batteriet på 60 minutter:
+\begin{equation}
+\Delta O_{maks} = 5 W \cdot 1 h = 5Wh
+\end{equation}
+
+Altså er den maksimale mængde watt timer den givne oplader kan påføre batteriet 5. I alle forsøgene starter mobilen på 15 \% opladning af de 5,3 Wh så:
+\begin{align*}
+O_{start} = 5,3 \cdot 0,15 = 0,8 Wh
+\end{align*}
+ 
+
+\textbf{1. kør}
+
+I det første forsøg ender telefonen på 82 \% efter 60 minutter så:
+\begin{align*}
+& \Delta O_{1\%} = 82\%-15\% =  67\%  \\
+& \Delta O_1 = 5,3 Wh \cdot 0,67 = 3,6 Wh
+\end{align*}
+
+
+Nyttevirkningen (i \%) kan nu beregnes vha. $\Delta O_1$ og $\Delta O_{maks}$:  
+\begin{equation}
+\eta_1 = \frac{\Delta O_1}{\Delta O_{maks}} \cdot 100 = \frac{3,6 Wh}{5 Wh} \cdot 100 \approx 86 \%
+\end{equation}
+
+\textcolor{red}{Her skal der laves videre og overvejes}
+
+\begin{align*}
+& \Delta O_{1.2\%} = 77\%-15\% =  62\%  \\
+& \Delta O_{1.2} = 5,3 Wh \cdot 0,62 = 3,3 Wh
+\end{align*}
+Nyttevirkningen 2.2 beregnes:
+\begin{equation}
+\eta_{1.2} = \frac{\Delta O_{1.2}}{\Delta O_{maks}} \cdot 100 = \frac{3,3 Wh}{5 Wh} \cdot 100 = 66 \%
+\end{equation}
+
+Dette gøres ved de to næste forsøg, stadig efter 60 minutters opladning.
+
+\textbf{2. kør:}
+\begin{align*}
+& \Delta O_{2\%} = 81\%-15\% =  66\%  \\
+& \Delta O_2 = 5,3 Wh \cdot 0,66 = 3,5 Wh
+\end{align*}
+Nyttevirkningen beregnes:
+\begin{equation}
+\eta_2 = \frac{\Delta O_2}{\Delta O_{maks}} \cdot 100 = \frac{3,5 Wh}{5 Wh} \cdot 100 \approx 83 \%
+\end{equation}
+
+Her i kør to er der muligvis gået noget galt i målingen da på ændringen i mobilens procent ladning er meget stor fra det 50. minut til 60. så det ville måske være mere relevant at undersøge det kør to efter 50 minutter i stedet for 60.
+\begin{align*}
+& \Delta O_{2.2\%} = 72\%-15\% =  57\%  \\
+& \Delta O_{2.2} = 5,3 Wh \cdot 0,57 = 3 Wh
+\end{align*}
+Nyttevirkningen 2.2 beregnes:
+\begin{equation}
+\eta_{2.2} = \frac{\Delta O_{2.2}}{\Delta O_{maks}} \cdot 100 = \frac{3 Wh}{5 Wh} \cdot 100 = 60 \%
+\end{equation}
+
+\textbf{3. kør:}
+\begin{align*}
+& \Delta O_{3\%} = 57\%-15\% =  42\%  \\
+& \Delta O_3 = 5,3 Wh \cdot 0,42 = 2,2 Wh
+\end{align*}
+Nyttevirkningen beregnes:
+\begin{equation}
+\eta_3 = \frac{\Delta O_3}{\Delta O_{maks}} \cdot 100 = \frac{2,2 Wh}{5 Wh} \cdot 100 \approx 44 \%
+\end{equation}
