@@ -153,11 +153,16 @@ De tre værdier for $\eta$ stilles op i et $(L,\eta)$ koordinatsystem ser det s�
 \caption{}
 \label{figure:graf4}
 \end{figure}
-I samme omgang laves der en lineær regression men kun af de tre målte punkter. Det sidste punkt der er skæringen med x-aksen bestemmes ud fra regressionen:
+I samme omgang laves der en lineær regression men kun af de tre målte punkter, dette aflæses til:
+\begin{equation}
+y=-0,8422x+0,8393 \Rightarrow \eta = -0,8422L+0,8393
+\label{eq:regression}
+\end{equation}
+Det sidste punkt der er skæringen med x-aksen bestemmes ud fra regressionen \ref{eq:regression}:
 \begin{align*}
-& solve(y=-0.8422x+0.8393,x) \\
-& \Leftrightarrow x = 1,003964 \Leftrightarrow L \approx 1 cm
+& solve(\eta =-0.8422L+0.8393,L) \\
+& \Leftrightarrow L = 1,003964 \approx 1 cm
 \end{align*} 
 Dette er så den maksimale værdi for L, altså den maksimale afstand mellem opladerens overflade og telefonen med cover. Dette virker som en brugbar projektion da det er tæt på den maksimale L værdi som der blev målt til under forsøget, der var lige under 1 cm. Dette vil så sige at den bestemte lineære ligning til en vis grænse kan benyttes til at vise en sammenhæng mellem afstanden og nyttevirkningen, og i sidste ende hvor meget power man kan få ud af opladeren. I hvert fald for den givne IKEA oplader.
 
-Altså i de tre forsøg formåede den trådløse oplader fra IKEA at overføre 3,6 Wh, 3,0 Wh og 2,2 Wh som henholdsvis er en nyttevirkning på 86 \%, 60 \% og 44 \% for de tre 'kør'. Altå er det tydeligt at når afstanden L mellem sender og modtager vokser mindskes energioverførslen betydeligt.
+Altså i de tre forsøg formåede den trådløse oplader fra IKEA at overføre 3,6 Wh, 3,0 Wh og 2,2 Wh som henholdsvis er en nyttevirkning på 86 \%, 60 \% og 44 \% for de tre fors. Altå er det tydeligt at når afstanden L mellem sender og modtager vokser mindskes energioverførslen betydeligt. Ud fra de tre forsøg og den dannede prognose ses det at den benyttede IKEA (QI) opladers nyttevirkning ændrer sig ud fra ligning \ref{eq:regression}.
