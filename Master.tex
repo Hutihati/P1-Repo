@@ -8,12 +8,13 @@
 \frontmatter %% romertegn som sidetal %%
 
 %% folderinput er så man frit kan flytte filerne ned til de relevante mapper %%
-
 	\begin{folderinput}{Setup}
 \input{Forside}
 \cleardoublepage
 \input{Titelblad}
 \cleardoublepage
+
+\input{Forord}
 
 %% Table of Contents %%
 \phantomsection													% Kunstigt afsnit, som hyperlinks kan 'holde fast i'
@@ -51,8 +52,11 @@
 \input{Beskrivelse}
 \input{Beskrivelse_2}
 	\end{folderinput}
-
+	
+\input{Diskusion/Diskusion}
 \input{Setup/Konklusion}
+
+\input{Perspektivering/Perspektivering}
 
 	
 \bibliography{bib/bibfil} %% Litteraturlisten indsættes her %%
