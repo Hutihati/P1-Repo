@@ -283,25 +283,25 @@ Resultaterne fra simulationen kan også benyttes til at vise udviklingen for str
 
 Graf \ref{figure:forsg1} viser tre funktioner for strømstyrken ved en stigende frekvens. Forskellen på de tre sæt data for funktionerne er, at de henholdsvis har indsat en modstand på $250 \Omega$, $500 \Omega$ eller $1000 \Omega$. Funktionen med modstanden på $250 \Omega$ giver et stort udslag i løbet af en stigning i frekvens mellem $1 kHz$ og $2 kHz$. Toppunktet for funktionen er skarpt optegnet ved den resonante frekvens, hvorefter strømstyrken er blevet mere end halveret ved en frekvens på $3 kHz$. På højere frekvenser falder strømstyrken fortsat, men faldet stilner roligt af. Ved funktionen med en modstand på $500 \Omega$ er udsvinget for strømstyrken ved den resonante frekvens halveret i forhold til første funktion. Til gengæld sker faldet ved større frekvenser ikke så drastisk. Derved bliver frekvensspektret forstørret for et fornuftigt strømstyrkeoutput. Ved den sidste funktion med en modstand på $1000 \Omega$ er udslaget ved den resonante frekvens næste jævnet ud sammenlignet med de to andre funktion. Til gengæld er faldet for strømstyrken lille, og frekvensområdet for en stabil strømstyrke er forlænget meget i forhold til de første to funktioner. Sammenlignet med første funktion, så er det overordnede fald i strømstyrken lav for tredje graf. Hvor den første graf med en modstand på $250 \Omega$ falder med op til 75 procent fra den resonante frekvens på $2.197 kHz$ til $4 kHz$, så sker der kun et fald på 30 procent for den tredje funktion med en modstand på $1000 \Omega$ over samme frekvensområde.
 
-\subsubsection{Beregning af elektrisk flux}
+\subsubsection{Beregning af den elektromotoriske spænding}
 
-Ved induktiv kobling er det muligt at beregne den inducerede elektriske flux ved hjælp af den magnetiske flux. Ifølge Faraday's lov er den elektriske flux beskrevet som det negative differentiale af den magnetiske flux i forhold til tiden.
+Ved induktiv kobling er det muligt at beregne den inducerede elektromotoriske spnæding ved hjælp af den magnetiske flux. Ifølge Faraday's lov er den elektromotoriske spænding beskrevet som det negative differentiale af den magnetiske flux i forhold til tiden.
 
 Den benyttede induktor i forsøget er en cylinderformet spole. Det magnetiske felt for spolen er angivet som $\mu_o \cdot n \cdot I$, hvor n er antal vindinger for spolen, og I er strømstyrken. For at beregne den samlede magnetiske flux dannet i spolen, så skal arealet for den cylinderformede spoles tværsnit og længden for spolen ganges på. Tværsnitsarealet for spolen kan opskrives som $2 \pi r^2$, så den magnetiske flux kan beregnes ved $\Phi_B = \mu_o \cdot n \cdot I \cdot 2 \cdot \pi \cdot r^2 \cdot l$. Induktansen for spolen beregnes ved $\mu_o \cdot n \cdot 2 \cdot \pi \cdot r^2$, hvilket kun består af konstanter, så den magnetiske flux kan beskrives som $\Phi_B = L \cdot I$.
 
-Den elektriske flux for spolen kan nu beskrives ved Faraday's lov:
+Den elektromotoriske spænding for spolen kan nu beskrives ved Faraday's lov:
 
 \begin{equation}
 \xi = - \frac{d\Phi_B}{dt}
 \end{equation}
 
-Herved kan udtrykket for den magnetiske flux indsættes, så den elektriske flux kan beregnes ved:
+Herved kan udtrykket for den magnetiske flux indsættes, så den elektromotoriske spænding kan beregnes ved:
 
 \begin{equation}
 \xi = - L \cdot \frac{dI}{dt}
 \end{equation}
 
-Faraday's lov beskrives her, hvordan størrelsen på den elektriske flux er afhængig af en varierende strømstyrke. Strømstyrken kan beskrives ved $I_o \cdot sin(\omega \cdot t + \varphi$, hvor $I_o$ er amplituden for sinusfunktionen, omega er $2 \cdot \pi \cdot f$ og $varphi$ angiver faseforskydelsen for funktionen.
+Faraday's lov beskrives her, hvordan størrelsen på den elektromotoriske spænding er afhængig af en varierende strømstyrke. Strømstyrken kan beskrives ved $I_o \cdot sin(\omega \cdot t + \varphi$, hvor $I_o$ er amplituden for sinusfunktionen, omega er $2 \cdot \pi \cdot f$ og $varphi$ angiver faseforskydelsen for funktionen.
 
 Ved forsøget med LCR-kredsløbet, hvor der foretages målinger over spolen, er det største udslag for spændingen ved $3 kHz$ med en spænding på $13,2 V$. Ved systemet er der indsat en modstand på $500 \Omega$, så amplituden kan beregnes ved $I_o = \frac{U}{R} = \frac{13,2 V}{500 \Omega} = 26,4 mA$. Strømstyrken kan herefter beskrives som en funktion af tiden ved:
 
@@ -311,17 +311,17 @@ I = 26,4 mA \cdot sin(2 \pi \cdot 3 kHz \cdot t + \varphi)
 
 Faseforskydelsen $\varphi$ varierer mellem 0 og $\frac{\phi}{2}$. Hvis forkydelsen er 0, følger funktionen for strømstyrken og spændingen hinanden. Hvis faseforskydelsen er på $\frac{\phi}{2}$, vil funktionen følge en cosinus i stedet.
 
-Herfra kan udtrykket for strømstyrken indsættes i formlen for den elektriske flux, som derved bliver:
+Herfra kan udtrykket for strømstyrken indsættes i formlen for den elektromotoriske spænding, som derved bliver:
 
 \begin{equation}
 \begin{aligned}
-&\xi = - L \cdot \frac{dI}{dt} = - 42,3 mH \cdot 26,4 mA \cdot cos(2 \phi \cdot 3 kHz \cdot t +\varphi) \cdot 2 \phi \cdot 3 kHz \\
+&\xi = - L \cdot \frac{dI}{dt} = - 42,3 mH \cdot 26,4 mA \cdot cos(2 \pi \cdot 3 kHz \cdot t +\varphi) \cdot 2 \pi \cdot 3 kHz \\
 &= cos(18,85 kHz \cdot t + \varphi) \cdot 21,05 H \cdot A \cdot Hz
 \end{aligned}
 \end{equation}
 
-Da der ingen tid $(t)$ er, så kan denne ikke beregnes. 
+Da der ingen tid $(t)$ er, så kan denne ikke beregnes. Ved en kendt tid er det muligt at beregne den elektromotoriske spænding ved modtagerspolen. Beregningen tager udgangspunkt i at finde den overførte energi fra transmitteren til modtageren. Faraday's lov kan benyttes til at beregne det teoretiske udbytte af elektromotorisk spænding ved modtageren ved omdannelse af den magnetiske flux afsendt fra transmitteren. Det skal dog siges, at beregningerne går ud fra, at hele magnetfeltet fra transmitteren når ud til modtageren, så intet går tabt til omgivelserne i luften. Derfor skal resultatet for den elektromotoriske spænding ganges med nyttivirkningen (Se forsøg 2).
 
-Ud fra forsøgende med LCR-kredsløb kom der forskellige værdier for strømstyrken, hvor der tydeligt sker ændringer, afhængig af frekvensen. Ved den resonante frekvens $(2197 \, Hz)$ sker der en stor ændring i strøm, hvor den når helt op på $20,00 \, mA$, hvor den på mindre frekvenser er væsentligt lavere. Ved højere værdier på modstanden sker der også en ændring i værdien for resonant frekvens, højere modstand er lig lavere resonant frekvens, som så giver en lavere effekt $(mA)$.
+Ud fra forsøgende med LCR-kredsløb kom der forskellige værdier for strømstyrken, hvor der tydeligt sker ændringer, afhængig af frekvensen. Ved den resonante frekvens $(2197 \, Hz)$ sker der en stor ændring i strøm, hvor den når helt op på $20,00 \, mA$, hvor den på mindre frekvenser er væsentligt lavere. Ved højere værdier på modstanden sker der også en ændring i værdien for resonant frekvens, højere modstand er lig lavere resonant frekvens, som videre giver en lavere effekt $(mA)$.
 
 \newpage
